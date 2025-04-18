@@ -245,6 +245,123 @@ section h2 {
 }
 
 
+/* 📄 Sección de Ejemplos */
+.seccion-ejemplos {
+  padding: 30px 0; /* reducido de 40px */
+  background-color: white;
+  border-top: 1px solid #ddd;
+}
+
+.ejemplos-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px; /* reducido un poco más */
+  flex-wrap: wrap;
+  max-width: 950px; /* antes 1000px */
+  margin: 0 auto;
+}
+
+/* 🎞️ Carrusel */
+.carrusel {
+  position: relative;
+  width: 100%;
+  max-width: 380px; /* antes 420px */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.carrusel-imagenes {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carrusel-imagenes img {
+  min-width: 100%;
+  display: none;
+  border-radius: 10px;
+  transition: opacity 0.5s ease;
+}
+
+.carrusel-imagenes img.activo {
+  display: block;
+}
+
+/* Flechas */
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px; /* antes 26px */
+  background-color: rgba(0, 34, 68, 0.6);
+  color: white;
+  border: none;
+  padding: 6px 8px; /* más pequeñas */
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.flecha:hover {
+  background-color: rgba(0, 34, 68, 0.9);
+}
+
+.flecha.izquierda {
+  left: 8px;
+}
+
+.flecha.derecha {
+  right: 8px;
+}
+
+/* 📝 Texto */
+.ejemplos-texto {
+  flex: 1;
+  min-width: 260px;
+}
+
+.ejemplos-texto h2 {
+  color: #002244;
+  font-size: 1.5em; /* antes 1.7em */
+  margin-bottom: 8px;
+}
+
+.ejemplos-texto p {
+  font-size: 0.95em; /* más compacto */
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ejemplos-contenido {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .carrusel {
+    margin-bottom: 20px;
+  }
+
+  .flecha {
+    font-size: 20px;
+    padding: 5px 8px;
+  }
+
+  .ejemplos-texto h2 {
+    font-size: 1.4em;
+  }
+
+  .ejemplos-texto p {
+    font-size: 0.9em;
+  }
+}
+
+
+
 /* Contacto */
 /* Refina la presentación del formulario */
 form {
